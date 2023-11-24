@@ -64,27 +64,27 @@ station2 = 'nkx'
 # pings the university of wyoming server to request data arrays
 try:
     df_vbg = WyomingUpperAir.request_data(date, station)
-except: 
+except Exception as e: 
     df_vbg = pd.DataFrame()
 try:
     df_vbg_24 = WyomingUpperAir.request_data(date1, station)
-except:
+except Exception as e: 
     df_vbg_24 = pd.DataFrame()
 try:
     df_oak = WyomingUpperAir.request_data(date, station1)
-except:
+except Exception as e: 
     df_oak = pd.DataFrame()
 try:
     df_oak_24 = WyomingUpperAir.request_data(date1, station1)
-except:
+except Exception as e: 
     df_oak_24 = pd.DataFrame()
 try:
     df_nkx = WyomingUpperAir.request_data(date, station2)
-except:
+except Exception as e: 
     df_nkx = pd.DataFrame()
 try:
     df_nkx_24 = WyomingUpperAir.request_data(date1, station2)
-except:
+except Exception as e: 
     df_nkx_24 = pd.DataFrame()  
 
 #------------------------------------------------------------------------------------
